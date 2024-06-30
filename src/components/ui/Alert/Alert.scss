@@ -1,0 +1,36 @@
+//**Error
+
+$borderColor: rgba(255, 25, 0, 0.322);
+
+@mixin alert($name, $borderColor, $bgColor, $color) {
+  .#{$name} {
+    border: 2px dotted $borderColor;
+    border-radius: 0.8rem;
+    padding: 1.3rem;
+    background-color: $borderColor;
+    columns: $color;
+
+    .alert-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        margin-right: 0.8rem;
+      }
+    }
+    p {
+      margin-top: 1.2rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
+// @include alert('alert-danger', , , )
